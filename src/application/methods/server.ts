@@ -386,7 +386,7 @@ export class serverMethods {
     if (forceDelete) force = '/force';
     return this.application.request(
       'DELETE',
-      null,
+      { return_resources: 1 },
       'Successfully deleted!',
       `/api/application/servers/${internalId}${force}`
     );
